@@ -1,0 +1,646 @@
+@font-face{
+    font-family: "WeblySleek";
+        src:url('../WeblySleek.ttf');
+}
+@font-face{
+    font-family: "MontserratBold";
+     src:url('../Montserrat-Bold.ttf');
+}
+@font-face{
+    font-family: "MontserratRegular";
+     src:url('../Montserrat-Regular.ttf');
+}
+
+*{
+    margin:0;
+    padding:0;
+    font-family: WeblySleek,Helvetica,Sans-Serif;
+}
+html{
+    background: #111;
+}
+body{
+    overflow-x: hidden;
+}
+body *{
+    display:block;
+    }
+h2{
+    font-family:MontserratBold;
+}
+header{
+    position:fixed;
+    width:100%;
+    height:100%;
+    z-index:10;
+     -webkit-transition:top 2s ,height .5s;
+    -moz-transition: top 2s ,height .5s;
+    -ms-transition: top 2s ,height .5s;
+    -o-transition: top 2s ,height .5s;
+    transition: top 2s ,height .5s;
+}
+#logo img{
+    position:relative;
+    margin:10px;
+    width:700px;
+    top:150px;
+    left: 13px;
+     -webkit-transition:left .2s;
+    -moz-transition: left .2s;
+    -ms-transition: left .2s;
+    -o-transition: left .2s;
+    transition: left .2s;
+}
+#logo span{
+    display: none;
+    font-size:.000000001em;
+}
+header nav{
+    position:absolute;
+    justify-content: flex-end;
+    top:50px;
+    right:0px;
+    width:90%;
+    display: flex;
+     -webkit-transition:top .5s;
+    -moz-transition: top .5s;
+    -ms-transition: top .5s;
+    -o-transition: top .5s;
+    transition: top .5s;
+}
+header nav a{
+    padding: 0px 30px 5px;
+    color:#FFF;
+    height:50px;
+    text-decoration: none;
+    font-size:1.2rem;
+    -webkit-transition:all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+header:not(.docked) nav a div{
+    background:#f5a549;
+    width:0px;
+    height:5px;
+    -webkit-transition:all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+header.docked{
+    z-index:99;
+    top:0;
+    height:50px;
+    background:#222;
+    box-shadow: 0px 1px 5px #000;
+    -webkit-transition:background 1s;
+    -moz-transition: background 1s;
+    -ms-transition: background 1s;
+    -o-transition:background 1s;
+    transition: background 1s;
+}
+header.docked #logo img{
+    width:200px;
+    top:0px;
+    left:20px;
+    -webkit-transition:left .5s;
+    -moz-transition: left .5s;
+    -ms-transition: left .5s;
+    -o-transition: left .5s;
+    transition: left .5s;
+
+    }
+header.docked nav{
+    top:0px;
+    width:80%;
+    justify-content: flex-end;
+    -webkit-transition:top .5s;
+    -moz-transition: top .5s;
+    -ms-transition: top .5s;
+    -o-transition: top .5s;
+    transition: top .5s;
+}
+header nav a:hover, header nav a.active{
+    color:#f5a549
+}
+
+header nav a:hover div, header nav a.active div{
+    width:100%;
+    -webkit-transition:all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+
+#news{
+    position:fixed;
+    display:block;
+    width:100%;
+    height:100%;
+    top:0;
+    z-index:0;
+    background: url('../img/bg1.jpg') no-repeat;
+    background-size:cover;
+}
+#news.disband{
+    position:absolute;
+}
+#news *{
+    color:#FFF;
+}
+#newsBg{
+    width:0;
+    height:0;
+}
+#newsContent{
+    position:absolute;
+    background: rgba(0,0,0,.5);
+    width:100%;
+    height:100%;
+    z-index:1;
+}
+#newsText{
+    position:absolute;
+    width:100%;
+    z-index:2;
+    top:400px;
+    left:70px;
+    text-align:left;
+     -webkit-transition:all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+#newsText h2{
+    display:block;
+    width:600px;
+    font-size:70px;
+     -webkit-transition:all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+#newsText .bigCaps{
+    position:relative;
+    left:0;
+    font-family: MontserratBold;
+    margin:-140px 0 0;
+    -webkit-transition:left 2s;
+    -moz-transition: left 2s;
+    -ms-transition: left 2s;
+    -o-transition: left 2s;
+    transition: left 2s;
+    
+}
+#newsText .smallCaps{
+    position:absolute;
+    left:0;
+    font-family: MontserratRegular;
+    font-size:20px;
+    -webkit-transition:all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+#newsText p{
+    position:relative;
+    margin: 10px 0px;
+    width:calc(100% - 150px);
+     -webkit-transition:all 2s;
+    -moz-transition: all 2s;
+    -ms-transition: all 2s;
+    -o-transition: all 2s;
+    transition: all 2s;
+}
+#news.disband .bigCaps{
+    position:absolute;
+    left:-1000px;
+    -webkit-transition:left .5s;
+    -moz-transition: left .5s;
+    -ms-transition: left .5s;
+    -o-transition: left .5s;
+    transition: left .5s;
+}
+
+#news.disband .smallCaps{
+    position:absolute;
+    left:-1000px;
+    -webkit-transition:left 1.5s;
+    -moz-transition: left 1.5s;
+    -ms-transition: left 1.5s;
+    -o-transition: left 1.5s;
+    transition: left 1.5s;
+}
+#cariMenu{
+    position:absolute;
+    background:#DDD;
+    top:1024px;
+    width:100%;
+    height:1100px;
+    z-index:21;
+}
+#cariMenuContent{
+    position:absolute;
+    width:80%;
+    height:90%;
+    top:10%;
+    left: 10%;
+    text-align:center;
+}
+#waktuSelector{
+    visibility: hidden;
+    height:0;
+}
+#waktuSelector.active{
+    visibility: visible;
+    height:20px;
+}
+#formNavigation,#waktuSelector.active{
+    display:flex;
+    margin:50px auto 30px;
+    width:50%;
+    border-radius:50px;
+    text-align: center;
+    align-items: stretch;
+}
+#formNavigation a{
+    font-family:Sans-serif;
+    font-size:.8rem;
+    text-decoration: none;
+    color:#777;
+    white-space: nowrap;
+    width:50%;
+}
+#formNavigation a div,#waktuSelector.active a div{
+    margin:auto;
+    border:2px solid #DDD;
+    background:#AAA;
+    border-radius:50px;
+    padding: 2px 10px;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+}
+
+#formNavigation a:hover div, #formNavigation a.active div, #waktuSelector.active a.active div, #waktuSelector.active a:hover div{
+    background:#f26417;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+#cariMenuContent form{
+    margin:20px auto 40px;
+    text-align:center;
+    display:flex;
+}
+#cariMenuContent form > div{
+    margin:auto;
+    display:none;
+    width: 600px;
+    text-align:center;
+}
+#cariMenuContent form >div>div{
+    margin:5px 0;
+    width:100%;
+}
+#cariMenuContent form >div>div>*{
+    margin:5px 0;
+    width:100%;
+}
+#cariMenuContent form input,#cariMenuContent form select{
+    border:1px solid #DDD;
+    max-width:75%;
+    padding: 10px;
+    background:#FFF;
+    font-family:Sans-Serif;
+    font-size:1.2rem;
+    text-align:center;
+    box-sizing:content-box;
+    -ms-box-sizing:content-box;
+    -moz-box-sizing:content-box;
+    -webkit-box-sizing:content-box; 
+}
+
+#cariMenuContent form input[readonly]{
+    background:#DDD;
+    color:#777;
+    font-size: 40px;
+}
+
+#cariMenuContent form >div.active{
+    display:flex;
+    flex-direction: column;
+}
+#cariMenuContent button{
+    border:none;
+    background:#AAA;
+    color:#FFF;
+    font-family: MontserratBold;
+    font-size:1.2rem;
+    padding: 10px 75px;
+    margin: 0 auto;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+#cariMenuContent button:hover{
+    background:#f26417;
+    border-radius: 10px;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    
+}
+#infoAktifitas{
+    position:relative;
+    bottom:250px;
+    left:-1000px;
+    background:#f26417;
+    color:#FFF;
+    display:flex;
+    padding:25px;
+    opacity:0;
+     z-index:99;
+    flex-direction: column;
+    text-align: left;
+    -webkit-animation:fadeOut 2s;
+
+}
+#infoAktifitas.active{
+    opacity:100;
+    left:0px;
+    visibility: visible;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;  
+
+}
+#infoAktifitas p{
+    font-size:25px;
+    font-family: MontserratBold;
+    padding: 0 0 5px;
+    border-bottom: 2px solid #EEE;
+}
+#subformNavigation, #waktuSelector.active{
+    display:flex;
+    justify-content: center;
+    align-items: stretch;
+}
+#subformNavigation a, #waktuSelector.active a {
+    margin: 0 5px;
+    text-decoration: none;
+    color:#999;
+    width:100% ;
+     -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+#subformNavigation a div{
+    height:5px;
+    margin:5px 0 0;
+    background:#AAA;
+     -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+#subformNavigation a.active{
+    color:#f26417;
+     -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+#subformNavigation a.active div,#subformNavigation a:hover div{
+    background:#f26417;
+     -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+#cariMenuContent article{
+    margin:40px auto;
+    text-align:center;
+}
+#cariMenuContent form div>div,#cariMenuContent form div[id^=subform]{
+    display:flex;
+    justify-content: center;
+}
+#cariMenuContent form div[id^=subform]{
+    display:none;
+}
+#cariMenuContent form div[id^=subform].active{
+    display:flex;
+}
+#cariMenuContent form div[id^=subform]> div{
+    margin: 5px 10px;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+#cariMenuContent form >div>div>div>div>*{
+    margin: 5px 10px;
+    width:50%;
+}
+label {
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+    font-size:15px;
+        text-align: left;
+}
+label input {
+    position:relative;
+    width: 13px;
+    height: 13px;
+    margin:0;
+    top: 27px;
+    left: -15px;
+}
+#hasilMenu{
+    position:absolute;
+    width:100%;
+    height:1000px;
+    top:160%;
+    background:#DDD;
+    opacity:0;
+    -webkit-transition: all 2s;
+    -moz-transition: all 2s;
+    -ms-transition: all 2s;
+    -o-transition: all 2s;
+    transition: all 2s;
+}
+#hasilMenu.active{
+    z-index:31;
+    opacity: 100;
+    -webkit-transition: all 2s;
+    -moz-transition: all 2s;
+    -ms-transition: all 2s;
+    -o-transition: all 2s;
+    transition: all 2s;
+}
+#hasilPagi{
+    width:100%;
+    height:25%;
+    background:#DDD;
+}
+#hasilSiang{
+    width:100%;
+    height:25%;
+    background:#AAA;
+}
+#hasilCamilan{
+    width:100%;
+    height:25%;
+    background:#DDD;
+}
+#hasilMalam{
+    width:100%;
+    height:25%;
+    background:#AAA;
+}
+.itemName{
+    font-family: MontserratRegular;
+    font-size:20px;
+}
+.itemGram p{
+    font-family: MontserratRegular;
+    font-size: 15px;
+}
+.itemGram p:nth-child(2){
+    font-family: MontserratBold;
+    font-size: 15px
+}
+
+@media (max-width:800px){
+     header.docked nav{
+        position:fixed;
+        height:100%;
+        width:300px;
+        right:-300px;
+        background:#333;
+        flex-direction: column;
+        justify-content: flex-start;
+        -webkit-transition:right 1s ;
+        -moz-transition:right 1s ;
+        -ms-transition:right 1s ;
+        -o-transition:right 1s ;
+        transition:right 1s ;
+    }
+    header.docked nav.active{
+        right:0px;
+        -webkit-transition:right 1s ;
+        -moz-transition:right 1s ;
+        -ms-transition:right 1s ;
+        -o-transition: right 1s;
+        transition:right 1s ;
+    }
+    header.docked nav #toggler{
+        position:relative;
+        background:#555 url("../img/toggler.png") no-repeat center;
+         width:50px;
+        height:50px;
+        left:-50px;
+        top:0px;
+    }
+     #news{
+        background-position: center;
+    }
+}
+@media (max-width:700px){
+    header #logo img{
+        width:100%;
+        left:-5%;
+    }
+    header nav{
+        top:5px;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+   header nav a{
+       max-width: 220px;
+       white-space: nowrap;
+   }
+    #newsText{
+        left:10%;
+        top:375px;
+    }
+    #newsContent .bigCaps{
+        font-size: 10vw;
+    }
+    #cariMenuContent form >#formPreferensi.active{
+        flex-direction:row;
+    }
+    #subformNavigation{
+        flex-direction:column;
+        width:75px;
+        justify-content: flex-start;
+    }
+    #formPreferensi.active>div{
+        width:calc(100% - 75px);
+    }
+}
+.hasilContent{
+    display:flex;
+    flex-direction: column;
+}
+.hasilContent >p{
+    margin:10px;
+    font-family: MontserratBold;
+    font-size: 30px;
+    border-bottom: 2px solid #000;
+}
+.hasilContentItemContainer{
+    display: flex;
+}
+.hasilContentItem{
+    display:flex;
+    flex-direction: column;
+    margin:10px;
+}
+.hasilContentItem img{
+    width:100px;
+    height:100px;
+}
+.itemGram{
+    display: flex;
+    
+}
+@media (max-width:580px){
+    .subformItem label input{
+        width:12px;
+    }
+    .subformItem label{
+        font-size:2.3vw;
+    }
+}
+@-webkit-keyframes fadeOut{
+    from{opacity:100;}
+    to{ opacity:0;}
+}
+#waktuSelector.active{
+    width:75%;
+}
